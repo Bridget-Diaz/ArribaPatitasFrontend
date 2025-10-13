@@ -1,0 +1,73 @@
+.producto-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  border: 2px solid #a8dadc;
+}
+
+/* Título */
+.producto-form-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #1d3557;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #457b9d;
+  outline: none;
+}
+
+/* Botones */
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.btn-save {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #21867a;
+}
+
+.btn-cancel {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+.btn-cancel:hover {
+  background-color: #82c0c7;
+}

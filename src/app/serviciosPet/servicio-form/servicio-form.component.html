@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h2 class="titulo">{{ editando ? '✏️ Editar Servicio' : '➕ Nuevo Servicio' }}</h2>
+
+  <form (ngSubmit)="guardar()" class="form-servicio">
+    <label>Nombre del Servicio:</label>
+    <input type="text" [(ngModel)]="servicio.nombre" name="nombre" required />
+
+    <label>Descripción:</label>
+    <textarea [(ngModel)]="servicio.descripcion" name="descripcion"></textarea>
+
+    <label>Precio:</label>
+    <input type="number" [(ngModel)]="servicio.precio" name="precio" required />
+
+    <div class="acciones">
+      <button type="submit" class="btn btn-save">{{ editando ? 'Actualizar' : 'Guardar' }}</button>
+      <button type="button" (click)="cancelar()" class="btn btn-cancel">Cancelar</button>
+    </div>
+  </form>
+</div>
+

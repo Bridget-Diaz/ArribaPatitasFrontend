@@ -1,0 +1,100 @@
+.servicios-container, .form-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  border: 2px solid #a8dadc;
+}
+
+/* Títulos */
+.titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+/* Tabla */
+.tabla-servicios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-servicios th {
+  background-color: #457b9d;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.tabla-servicios td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.tabla-servicios tr:hover {
+  background-color: #f1faee;
+}
+
+/* Botones */
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.btn-add {
+  background-color: #2a9d8f;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.btn-add:hover {
+  background-color: #21867a;
+}
+
+.btn-edit {
+  background-color: #f4a261;
+  color: white;
+  margin-right: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #e07b39;
+}
+
+.btn-delete {
+  background-color: #e63946;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #b71c1c;
+}
+
+.btn-save {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #21867a;
+}
+
+.btn-cancel {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+.btn-cancel:hover {
+  background-color: #82c0c7;
+}
+

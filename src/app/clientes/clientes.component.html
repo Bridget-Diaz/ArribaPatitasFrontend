@@ -1,0 +1,41 @@
+<div class="admin-panel">
+  <h2>¡Bienvenido, Admin 🐾!</h2>
+  <p>Clientes registrados en el sistema:</p>
+  <div class="options">
+    <button routerLink="/panel">🔙 Volver al Panel</button>
+  </div>
+</div>
+
+<div class="clientes-section">
+  <h2>Lista de Clientes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Dirección</th>
+        <th>Fecha Registro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td data-label="ID">{{ cliente.id }}</td>
+        <td data-label="Nombre">{{ cliente.nombre }}</td>
+        <td data-label="Teléfono">{{ cliente.telefono }}</td>
+        <td data-label="Email">{{ cliente.email }}</td>
+        <td data-label="Dirección">{{ cliente.direccion }}</td>
+        <td data-label="Fecha Registro">{{ cliente.fechaRegistro | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="paw-background">
+  <div class="paw" style="left: 10%; animation-delay: 0s;">🐾</div>
+  <div class="paw" style="left: 30%; animation-delay: 2s;">🐾</div>
+  <div class="paw" style="left: 50%; animation-delay: 4s;">🐾</div>
+  <div class="paw" style="left: 70%; animation-delay: 6s;">🐾</div>
+  <div class="paw" style="left: 90%; animation-delay: 8s;">🐾</div>
+</div>

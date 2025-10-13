@@ -1,0 +1,36 @@
+<div class="servicios-container">
+  <h2 class="titulo">🐾 Gestión de Servicios Veterinarios 🐾</h2>
+
+  <button routerLink="/servicios/nuevo" class="btn btn-add">➕ Nuevo Servicio</button>
+
+  <table class="tabla-servicios">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Servicio</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of servicios; let i = index">
+        <td>{{ i + 1 }}</td><!--aea otra columna o que? xd-->
+        <td>{{ s.nombre }}</td>
+        <td>{{ s.descripcion }}</td>
+        <td>{{ s.precio | currency:'PEN S/' }}</td>
+        <td>
+          <button class="btn btn-edit" [routerLink]="['/servicios/editar', s.id]">✏️ Editar</button>
+          <button class="btn btn-delete" (click)="eliminar(s.id!)">🗑 Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+  <button routerLink="/panel" class="btn btn-add"> 🔙 Volver al Panel</button>
+
+</div>
+
+

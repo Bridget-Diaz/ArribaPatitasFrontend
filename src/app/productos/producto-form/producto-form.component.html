@@ -1,0 +1,25 @@
+<div class="producto-form-container">
+  <h2>{{ editando ? '✏️ Editar Producto' : '➕ Nuevo Producto' }}</h2>
+
+  <form (ngSubmit)="guardar()" #productoForm="ngForm">
+    <label>Nombre:</label>
+    <input type="text" [(ngModel)]="producto.nombre" name="nombre" required />
+
+    <label>Descripción:</label>
+    <textarea [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+
+    <label>Precio:</label>
+    <input type="number" [(ngModel)]="producto.precio" name="precio" required />
+
+    <label>Stock:</label>
+    <input type="number" [(ngModel)]="producto.stock" name="stock" required />
+
+   <button type="submit" class="btn btn-save" [disabled]="!productoForm.form.valid">
+             {{ editando ? '💾 Actualizar' : '✅ Guardar' }}
+    </button>
+
+   <button type="button" class="btn btn-cancel" (click)="router.navigate(['/productos'])">
+                🔙 Cancelar
+    </button>
+  </form>
+</div>

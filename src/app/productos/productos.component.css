@@ -1,0 +1,173 @@
+/* CONTENEDOR PRINCIPAL */
+.productos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra tabla y botones */
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* TITULO */
+.titulo {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #1565c0;
+  text-align: center;
+}
+
+/* CONTENEDOR TABLA CON SCROLL */
+.tabla-wrapper {
+  max-height: 65vh;      /* altura máxima visible */
+  overflow-y: auto;      /* scroll vertical */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centra la tabla */
+}
+
+/* TABLA */
+.tabla-productos {
+  width: 90%;             /* ancho controlado */
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;    /* evita que se corte el texto */
+}
+
+/* ENCABEZADO */
+.tabla-productos thead {
+  background: linear-gradient(90deg, #4cafef, #6ec6ff);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* CELDAS */
+.tabla-productos th,
+.tabla-productos td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* FILAS ALTERNADAS */
+.tabla-productos tbody tr:nth-child(odd) {
+  background-color: #f9f9fc;
+}
+.tabla-productos tbody tr:nth-child(even) {
+  background-color: #eef7ff;
+}
+
+/* HOVER */
+.tabla-productos tbody tr:hover {
+  background-color: #d6f0ff;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* NOMBRE CON COLOR DESTACADO */
+.tabla-productos td:nth-child(2) {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* PRECIO DESTACADO */
+.tabla-productos td:nth-child(4) {
+  font-weight: bold;
+  color: #1565c0;
+}
+
+/* STOCK SEGÚN NIVEL */
+td.stock-bajo {
+  color: #e53935;
+  font-weight: bold;
+}
+td.stock-medio {
+  color: #f9a825;
+  font-weight: bold;
+}
+td.stock-alto {
+  color: #43a047;
+  font-weight: bold;
+}
+
+/* BOTONES */
+.btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-add {
+  background-color: #66bb6a;
+  color: white;
+}
+.btn-add:hover {
+  background-color: #43a047;
+}
+
+.btn-edit {
+  background-color: #ffa726;
+  color: white;
+}
+.btn-edit:hover {
+  background-color: #fb8c00;
+}
+
+/* BOTON VOLVER */
+.volver-panel {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==== SCROLL PERSONALIZADO ==== */
+.tabla-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+.tabla-wrapper::-webkit-scrollbar-thumb {
+  background: #4cafef;
+  border-radius: 5px;
+}
+.tabla-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #2196f3;
+}
+.tabla-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.paw-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.paw {
+  position: absolute;
+  top: -50px;
+  font-size: 2.5rem;
+  opacity: 0.2;
+  animation: floatPaw 5s linear infinite;
+}
+
+@keyframes floatPaw {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
