@@ -3,14 +3,13 @@ import { ProductosComponent } from './productos/productos.component';
 import { ProductoFormComponent } from './productos/producto-form/producto-form.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './auth.guard'; // de tantos nombres 
+import { AuthGuard } from './auth.guard'; 
 import { PanelAdminComponent } from './panel-admin/panel-admin.component';
-import { ServicioListComponent } from './serviciosPet/servicio-list/servicio-list.component';
-import { ServicioFormComponent } from './serviciosPet/servicio-form/servicio-form.component';
+import { ServicioListComponent } from './servicios/servicios/servicio-list/servicio-list.component';
+import { ServicioFormComponent } from './servicios/servicios/servicio-form/servicio-form.component';
 import { ClientesComponent } from './clientes/clientes.component';
-//https://www.youtube.com/watch?v=RB6PStwqSGk
 
-//se ve ordenado?
+
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path:'panel',component:PanelAdminComponent,canActivate:[AuthGuard]},
@@ -25,4 +24,4 @@ export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
-//aea
+

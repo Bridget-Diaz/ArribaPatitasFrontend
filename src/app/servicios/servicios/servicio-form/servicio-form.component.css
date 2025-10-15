@@ -1,12 +1,12 @@
 .servicios-container, .form-container {
-  max-width: 900px;
+  max-width: 600px;
   margin: 30px auto;
   background: #ffffff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
-  border: 2px solid #a8dadc;
+  border: 2px solid #ededed;
 }
 
 /* Títulos */
@@ -81,20 +81,51 @@
 }
 
 .btn-save {
-  background-color: #2a9d8f;
+  background-color: #2AC77E;
   color: white;
+  width: 174px;
 }
 
 .btn-save:hover {
-  background-color: #21867a;
+  background-color: rgb(13, 96, 86);
 }
 
 .btn-cancel {
-  background-color: #a8dadc;
-  color: #1d3557;
+  background-color:  rgb(22, 128, 115);
+  color: white;
+  width: 124px;
 }
 
 .btn-cancel:hover {
-  background-color: #82c0c7;
+  background-color:  rgb(13, 73, 66);
 }
 
+.form-servicio {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-servicio label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1d3557;
+}
+
+.form-servicio input,
+.form-servicio textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-servicio textarea {
+  resize: vertical;
+}
+
+.acciones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

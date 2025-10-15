@@ -1,6 +1,11 @@
 <div class="servicios-container">
-  <h2 class="titulo">🐾 Gestión de Servicios Veterinarios 🐾</h2>
+  <h2 class="titulo">🐾 Gestión de Servicios 🐾</h2>
 
+  <button routerLink="/servicios/filtro&Page" class="btn" id="btnFilter" style="background-color: coral;">Filtros
+    <i class="fas fa-filter"></i>
+  </button>
+  <br>
+  <br>
   <button routerLink="/servicios/nuevo" class="btn btn-add">➕ Nuevo Servicio</button>
 
   <table class="tabla-servicios">
@@ -15,7 +20,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let s of servicios; let i = index">
-        <td>{{ i + 1 }}</td><!--aea otra columna o que? xd-->
+        <td>{{ i + 1 }}</td>
         <td>{{ s.nombre }}</td>
         <td>{{ s.descripcion }}</td>
         <td>{{ s.precio | currency:'PEN S/' }}</td>
