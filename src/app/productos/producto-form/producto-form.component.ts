@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductoService, Producto } from '../../servicios/producto.service';
+import { ProductoService, Producto } from '../../servicios/productos/producto.service';
 
 @Component({
   selector: 'app-producto-form',

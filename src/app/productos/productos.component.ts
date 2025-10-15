@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 //import { ProductoService, Producto } from './producto.service'; // ajustá el path si es necesario
-import { ProductoService, Producto } from '../servicios/producto.service';
+import { ProductoService, Producto } from '../servicios/productos/producto.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';

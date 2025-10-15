@@ -1,12 +1,12 @@
 .servicios-container, .form-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 30px auto;
   background: #ffffff;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
-  border: 2px solid #a8dadc;
+  border: 2px solid #EEEEEE;
 }
 
 /* Títulos */
@@ -25,7 +25,7 @@
 }
 
 .tabla-servicios th {
-  background-color: #457b9d;
+  background-color: #FF9500;
   color: white;
   padding: 12px;
   text-align: center;
@@ -38,7 +38,7 @@
 }
 
 .tabla-servicios tr:hover {
-  background-color: #f1faee;
+  background-color: #e9e9e8;
 }
 
 /* Botones */
@@ -52,7 +52,7 @@
 }
 
 .btn-add {
-  background-color: #2a9d8f;
+  background-color: #2AC77E;
   color: white;
   margin-bottom: 15px;
 }
@@ -62,13 +62,13 @@
 }
 
 .btn-edit {
-  background-color: #f4a261;
+  background-color: #61cdf4;
   color: white;
   margin-right: 5px;
 }
 
 .btn-edit:hover {
-  background-color: #e07b39;
+  background-color: #2580a1;
 }
 
 .btn-delete {
@@ -98,32 +98,3 @@
   background-color: #82c0c7;
 }
 
-.form-servicio {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-servicio label {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #1d3557;
-}
-
-.form-servicio input,
-.form-servicio textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.form-servicio textarea {
-  resize: vertical;
-}
-
-.acciones {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}

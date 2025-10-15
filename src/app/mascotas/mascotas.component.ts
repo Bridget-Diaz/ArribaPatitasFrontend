@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Mascota, MascotaService } from '../servicios/mascota.service';
+import { Mascota, MascotaService } from '../servicios/mascotas/mascota.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';

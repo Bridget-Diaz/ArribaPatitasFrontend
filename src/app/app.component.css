@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #fff8dc, #ffe4b5);
+  background: linear-gradient(135deg, #FFFEFB, #FFFEFB);
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -27,7 +27,7 @@ body::after {
   left: 70%;
   animation-delay: 6s;
 }
-/*VIDA ECOLOGICA paramos reciclando xd*/
+
 @keyframes floatPaw {
   0% {
     transform: translateY(0) rotate(0deg);
