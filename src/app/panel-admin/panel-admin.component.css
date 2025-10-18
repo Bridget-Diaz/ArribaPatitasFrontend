@@ -1,135 +1,357 @@
+:host {
+    --bg-dark-end: #CC3300;
+    --bg-light-start: #FF6600;
+    --bg-yellow-corner: #FF9933;
+    --accent: #FF5722;
+    --text-dark: #333333;
+    --form-bg: #ffffff;
+    --white: #ffffff;
+    --dark-button: #444444;
+    --page-bg: transparent;
+    --text-light: var(--white);
+    --paw-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--page-bg);
+    overflow: hidden;
+    position: relative;
+}
+
+.background-gradient {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-yellow-corner) 0%, var(--bg-light-start) 40%, var(--bg-dark-end) 100%);
+    z-index: 1;
+    display: block;
+}
+
+.brand-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 15px;
+    z-index: 20;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-fixed .logo-icon {
+    color: var(--bg-light-start);
+    font-size: 28px;
+}
+
+.brand-fixed span {
+    font-weight: 800;
+    color: var(--text-dark);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.login-container {
+    max-width: 350px;
+    width: 90%;
+    padding: 40px 30px 30px;
+    background-color: var(--form-bg);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: slideIn 0.6s ease-out;
+    border: none;
+    display: none;
+}
+
+.paw-icon-top {
+    display: flex;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-light-start);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg);
+    z-index: 12;
+}
+.paw-icon-top i {
+    color: var(--text-dark);
+    font-size: 22px;
+}
+
+.form-field-label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    position: static;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background: var(--white);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box;
+}
+
+.login-container input:focus {
+    background: var(--white);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--accent);
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--dark-button);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.login-container button:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
 .admin-panel {
-  max-width: 500px;
-  margin: 80px auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, #fff, #fef9f3);
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  z-index: 2;
-  animation: popIn 0.8s ease;
+    max-width: 1000px;
+    width: 95%;
+    padding: 60px 40px;
+    background-color: var(--form-bg);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: slideIn 0.6s ease-out;
+    border: 3px solid #f0f0f0;
 }
 
 .admin-panel h2 {
-  margin-bottom: 1rem;
-  color: #333;
-  font-size: 1.8rem;
-  text-shadow: 2px 2px #f8b50033;
+    color: var(--bg-dark-end);
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
+.admin-panel p {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: 500;
 }
 
-button {
-  padding: 14px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #f8b500;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  box-shadow: 0 6px 12px rgba(248, 181, 0, 0.4);
+.admin-panel .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.admin-panel .logout-btn {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #666666 0%, #444444 100%);
+    margin-top: 20px;
+    min-height: 100px;
+    font-size: 26px;
+}
+.admin-panel button {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, var(--bg-light-start) 0%, var(--accent) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
-button:hover {
-  background-color: #e09e00;
-  transform: scale(1.08) rotate(-2deg);
+.admin-panel button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--bg-dark-end) 100%);
 }
 
-/* Fondo animado con huellitas */
+.admin-panel button span:first-child {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.admin-panel .logout-btn {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #666666 0%, #444444 100%);
+    margin-top: 20px;
+    min-height: 100px;
+    font-size: 26px;
+}
+
+.admin-panel .logout-btn:hover {
+    background: linear-gradient(135deg, #555555 0%, #333333 100%);
+}
+
+@media (max-width: 768px) {
+    .admin-panel .options {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .admin-panel {
+        padding: 40px 25px;
+        max-width: 95%;
+    }
+
+    .admin-panel h2 {
+        font-size: 36px;
+    }
+
+    .admin-panel p {
+        font-size: 20px;
+    }
+
+    .admin-panel button {
+        min-height: 100px;
+        font-size: 20px;
+        padding: 25px 15px;
+    }
+
+    .admin-panel button span:first-child {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel h2 {
+        font-size: 32px;
+    }
+
+    .admin-panel p {
+        font-size: 18px;
+    }
+
+    .admin-panel button {
+        min-height: 90px;
+        font-size: 18px;
+    }
+}
+
 .paw-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+    display: block;
 }
 
 .paw {
-  position: absolute;
-  top: -50px;
-  font-size: 2.5rem;
-  opacity: 0.25;
-  animation: floatPaw 6s linear infinite, sway 3s ease-in-out infinite alternate;
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--paw-color);
+    animation: animatePaws 15s linear infinite;
 }
 
-/* Huellitas que caen */
-@keyframes floatPaw {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg) scale(1.2);
-    opacity: 0;
-  }
+.paw:nth-child(2) {
+    transform: scale(1.3);
+    animation-duration: 20s;
+    animation-delay: 2s;
+    opacity: 0.8;
 }
 
-/* Movimiento zig-zag para dar efecto más natural */
-@keyframes sway {
-  from {
-    transform: translateX(-20px);
-  }
-  to {
-    transform: translateX(20px);
-  }
-}
-
-/* Animación al aparecer el panel */
-@keyframes popIn {
-  0% {
+.paw:nth-child(3) {
     transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+    animation-duration: 18s;
+    animation-delay: 4s;
+    opacity: 0.7;
 }
 
-.paw-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+.paw:nth-child(4) {
+    transform: scale(1.1);
+    animation-duration: 25s;
+    animation-delay: 6s;
+    opacity: 0.9;
 }
 
-.paw {
-  position: absolute;
-  top: -50px;
-  font-size: 2.5rem;
-  opacity: 0.2;
-  animation: floatPaw 5s linear infinite;
+.paw:nth-child(5) {
+    transform: scale(1.4);
+    animation-duration: 16s;
+    animation-delay: 8s;
+    opacity: 0.85;
 }
 
-@keyframes floatPaw {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(50vh) rotate(180deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
+@keyframes animatePaws {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-
+@keyframes slideIn {
+    from {
+        transform: translateY(30px) scale(0.98);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

@@ -2,11 +2,11 @@
   <h2>¡Bienvenido, Admin 🐾!</h2>
   <p>¿Qué deseas hacer?</p>
   <div class="options">
-    <button routerLink="/productos">📦 Ver productos</button>
     <button routerLink="/mascotas">🐶 Ver mascotas</button>
     <button routerLink="/clientes">👥 Ver clientes</button>
     <button routerLink="/servicios">🩺 servicios</button>
-    <button (click)="logout()">🚪 Cerrar sesión</button>
+    <button routerLink="/reportes">📊 Reportes</button> <!-- Nuevo botón agregado -->
+    <button (click)="logout()" class="logout-btn">🚪 Cerrar sesión</button>
   </div>
 </div>
 
