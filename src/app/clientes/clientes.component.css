@@ -1,99 +1,146 @@
-/* Contenedor general */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  background-color: #fff;
+/* ======== PANEL DE ADMINISTRACIÓN ======== */
+.admin-panel {
+  text-align: center;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-/* Encabezado */
-thead th {
-  background-color: #4caf50;
-  color: white;
-  text-align: left;
-  padding: 10px;
-  font-weight: bold;
-  border-bottom: 2px solid #388e3c;
+.admin-panel h2 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 10px;
 }
 
-/* Filas del cuerpo */
-tbody td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Efecto hover en filas */
-tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Título */
-h2 {
-  color: #4caf50;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.admin-panel p {
+  color: #666;
+  font-size: 1.1em;
   margin-bottom: 15px;
 }
 
-/* Responsive: en pantallas pequeñas */
-@media screen and (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    display: none;
-  }
-
-  tbody tr {
-    margin-bottom: 15px;
-    border-bottom: 2px solid #4caf50;
-  }
-
-  tbody td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-  }
-
-  tbody td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    width: 45%;
-    font-weight: bold;
-    text-align: left;
-  }
+/* ======== SECCIÓN DE CLIENTES ======== */
+.clientes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30px auto;
+  width: 100%;
 }
 
+/* ======== TABLA DE CLIENTES ======== */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #f6c23e; /* 🔸 Amarillo profesional */
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+th, td {
+  text-align: center;
+  padding: 12px 15px;
+  font-size: 0.95em;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #fff8e1;
+  transition: background-color 0.3s ease;
+}
+
+/* ======== BOTÓN VERDE A LA DERECHA ======== */
+.options {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end; /* 🔹 Ubicado a la derecha */
+  margin-top: 25px;
+}
+
+.options button {
+  background-color: #28a745; /* 🟢 Verde */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.options button:hover {
+  background-color: #1e7e34;
+  transform: scale(1.05);
+}
+
+/* ======== PIES DE HUELLAS ======== */
 .paw-background {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .paw {
   position: absolute;
-  top: -50px;
-  font-size: 2.5rem;
-  opacity: 0.2;
-  animation: floatPaw 5s linear infinite;
+  bottom: -50px;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: pawUp 10s infinite linear;
 }
 
-@keyframes floatPaw {
+@keyframes pawUp {
   0% {
     transform: translateY(0) rotate(0deg);
+    opacity: 0.2;
   }
   50% {
-    transform: translateY(50vh) rotate(180deg);
+    opacity: 0.4;
   }
   100% {
-    transform: translateY(100vh) rotate(360deg);
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+  }
+
+  th, td {
+    font-size: 0.85em;
+    padding: 10px;
+  }
+
+  .admin-panel {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .options {
+    justify-content: center; /* En pantallas pequeñas, centrado */
   }
 }
