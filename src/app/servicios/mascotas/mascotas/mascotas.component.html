@@ -1,11 +1,4 @@
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="logo patitas" />
-    <div class="logo-text">
-      <span>ARRIBA</span> <span>PATITAS</span>
-    </div>
-  </div>
-</header>
+<app-header></app-header>
 
 <div class="mascotas-container">
   <h2 class="titulo">🐾 Lista de Mascotas 🐾</h2>
@@ -24,6 +17,7 @@
         </tr>
       </thead>
       <tbody>
+
         <tr *ngFor="let mascota of mascotas">
           <td>{{ mascota.propietario }}</td>
           <td>{{ mascota.nombre }}</td>
@@ -36,11 +30,10 @@
       </tbody>
     </table>
   </div>
-
-  <div class="volver-panel">
-    <button routerLink="/panel" class="btn btn-add"> 🔙 Volver al Panel</button>
-  </div>
 </div>
+
+
+
 
 
 <div class="paw-background">
@@ -49,5 +42,5 @@
   <div class="paw" style="left: 50%; animation-delay: 4s;">🐾</div>
   <div class="paw" style="left: 70%; animation-delay: 6s;">🐾</div>
   <div class="paw" style="left: 90%; animation-delay: 8s;">🐾</div>
-</div>
 
+</div>

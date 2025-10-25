@@ -3,14 +3,16 @@ import { Servicio, ServicioService } from '../servicio.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import Swal from 'sweetalert2';
+import { HeaderComponent } from '../../../header/header.component';
 
 @Component({
   selector: 'app-servicio-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, RouterLink],
+  imports: [CommonModule, RouterModule, RouterLink, HeaderComponent],
   templateUrl: './servicio-list.component.html',
   styleUrls: ['./servicio-list.component.css']
 })
+
 export class ServicioListComponent implements OnInit {
   servicios: Servicio[] = [];
 

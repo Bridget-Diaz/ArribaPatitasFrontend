@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Mascota, MascotaService } from '../servicios/mascotas/mascota.service';
+import { MascotaService } from '../mascota.service';
+import { Mascota } from '../mascota.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from '../../../header/header.component'; 
 
 @Component({
   selector: 'app-mascotas',
   standalone: true,
-  imports: [CommonModule,HttpClientModule, RouterLink],
+  imports: [CommonModule,HttpClientModule, RouterLink, HeaderComponent],
   templateUrl: './mascotas.component.html',
   styleUrl: './mascotas.component.css',
   providers:[ MascotaService]

@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Servicio, ServicioService } from '../servicio.service';
 import Swal from 'sweetalert2';
+import { HeaderComponent } from '../../../header/header.component';
 
 @Component({
   selector: 'app-servicio-form',
   standalone: true, 
-  imports: [FormsModule], 
+  imports: [FormsModule, HeaderComponent], 
   templateUrl: './servicio-form.component.html',
   styleUrls: ['./servicio-form.component.css']
 })
