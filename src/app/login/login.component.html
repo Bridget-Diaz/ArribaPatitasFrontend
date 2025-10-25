@@ -12,12 +12,6 @@
   <div class="paw" style="left: 90%; animation-delay: 8s;"></div>
 </div>
 
-<!-- 2. CABECERA FIJA -->
-<div class="brand-fixed">
-  <i class="fa-solid fa-paw logo-icon"></i>
-  <span>ARRIBA PATITAS</span>
-</div>
-
 <!-- 3. CONTENEDOR DEL FORMULARIO -->
 <div class="login-container">
   <div class="paw-icon-top">
@@ -28,7 +22,7 @@
 
   <form (ngSubmit)="login()">
     <label class="form-field-label">USERNAME</label>
-    <input type="text" [(ngModel)]="username" name="username" placeholder="@gmail.com" required />
+    <input type="text" [(ngModel)]="username" name="username" placeholder="username" required />
 
     <label class="form-field-label">CONTRASEÑA</label>
     <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••" required />

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ClienteService,Cliente } from '../servicios/Clientes/cliente.service';
+import { ClienteService, Cliente } from '../cliente.service';
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from '../../../header/header.component';
+
 @Component({
   selector: 'app-clientes',
   standalone: true,
-  imports: [CommonModule, HttpClientModule,RouterLink],
+  imports: [CommonModule, HttpClientModule,RouterLink, HeaderComponent],
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css'],
   providers: [ClienteService]

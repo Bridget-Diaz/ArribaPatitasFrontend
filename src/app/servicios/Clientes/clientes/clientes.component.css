@@ -1,0 +1,185 @@
+/* ======== FONDO GENERAL ======== */
+body, :host {
+  background-color: #fffaf3;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======== ENCABEZADO SUPERIOR ======== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 40px;
+  border-bottom: 3px solid #ff9800;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo con corazón y patita */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-text span:first-child {
+  color: #555;
+}
+
+.logo-text span:last-child {
+  color: #ff9800;
+}
+
+/* Botón de la esquina */
+.icon-btn {
+  background-color: #ff9800;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-btn:hover {
+  background-color: #f57c00;
+}
+
+/* ======== CONTENIDO PRINCIPAL CLIENTES ======== */
+.clientes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.clientes-section h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 30px 0 10px;
+  font-weight: 700;
+}
+
+/* ======== TABLA CLIENTES ======== */
+.clientes-section table {
+  width: 90%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.clientes-section thead {
+  background: linear-gradient(90deg, #ff9800, #ffa726);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.clientes-section th,
+.clientes-section td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Filas alternadas */
+.clientes-section tbody tr:nth-child(odd) {
+  background-color: #fff8ef;
+}
+.clientes-section tbody tr:nth-child(even) {
+  background-color: #fffbf5;
+}
+
+/* Hover */
+.clientes-section tbody tr:hover {
+  background-color: #ffe0b2;
+  transition: 0.2s ease-in-out;
+}
+
+/* Nombre del cliente */
+.clientes-section td[data-label="Nombre"] {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Teléfono */
+.clientes-section td[data-label="Teléfono"] {
+  font-weight: bold;
+  color: #e65100;
+}
+
+/* ======== BOTÓN VOLVER ======== */
+.options {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.options button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.options button:hover {
+  background-color: #f57c00;
+}
+
+/* ======== SCROLL ======== */
+.clientes-section table::-webkit-scrollbar {
+  width: 10px;
+}
+.clientes-section table::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 5px;
+}
+.clientes-section table::-webkit-scrollbar-thumb:hover {
+  background: #f57c00;
+}
+
+/* ======== PATITAS FONDO ======== */
+.paw-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.paw {
+  position: absolute;
+  top: -50px;
+  font-size: 2.5rem;
+  opacity: 0.15;
+  animation: floatPaw 5s linear infinite;
+}
+
+@keyframes floatPaw {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(50vh) rotate(180deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}

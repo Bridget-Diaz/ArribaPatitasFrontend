@@ -1,0 +1,15 @@
+<header>
+  <div  class="logo" routerLink="/panel" style="cursor: pointer;">
+    <img src="logo.png" alt="logo patitas" />
+    <div class="logo-text">
+      <span>ARRIBA</span> <span>PATITAS</span>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <a routerLink="/mascotas" routerLinkActive="active">Mascotas</a>
+    <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
+    <a routerLink="/servicios" routerLinkActive="active">Servicios</a>
+    <button class="logout-btn" (click)="logout()">Cerrar Sesión</button>
+  </nav>
+</header>

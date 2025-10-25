@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 import { ProductosComponent } from './productos/productos.component';
 import { ProductoFormComponent } from './productos/producto-form/producto-form.component';
-import { MascotasComponent } from './mascotas/mascotas.component';
+import { MascotasComponent } from './servicios/mascotas/mascotas/mascotas.component'; 
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard'; 
 import { PanelAdminComponent } from './panel-admin/panel-admin.component';
 import { ServicioListComponent } from './servicios/servicios/servicio-list/servicio-list.component';
 import { ServicioFormComponent } from './servicios/servicios/servicio-form/servicio-form.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesComponent } from './servicios/Clientes/clientes/clientes.component'; 
 
 
 export const routes: Routes = [
