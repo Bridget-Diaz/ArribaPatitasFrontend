@@ -179,13 +179,12 @@
 }
 
 .admin-panel .options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
 }
 .admin-panel .logout-btn {
-    grid-column: 1 / -1;
     background: linear-gradient(135deg, #666666 0%, #444444 100%);
     margin-top: 20px;
     min-height: 100px;
@@ -203,6 +202,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     min-height: 120px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,7 +222,6 @@
 }
 
 .admin-panel .logout-btn {
-    grid-column: 1 / -1;
     background: linear-gradient(135deg, #666666 0%, #444444 100%);
     margin-top: 20px;
     min-height: 100px;
@@ -235,7 +234,6 @@
 
 @media (max-width: 768px) {
     .admin-panel .options {
-        grid-template-columns: 1fr;
         gap: 25px;
     }
 
