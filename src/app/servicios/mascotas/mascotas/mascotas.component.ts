@@ -11,7 +11,8 @@ import { HeaderComponent } from '../../../header/header.component';
   standalone: true,
   imports: [CommonModule,HttpClientModule, RouterLink, HeaderComponent],
   templateUrl: './mascotas.component.html',
-  styleUrl: './mascotas.component.css',
+  //styleUrl: './mascotas.component.css',
+  styleUrls: ['./mascotas.component.css'],
   providers:[ MascotaService]
 })
 export class MascotasComponent {
