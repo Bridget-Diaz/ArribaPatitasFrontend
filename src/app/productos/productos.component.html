@@ -1,0 +1,49 @@
+<div class="productos-container">
+  <h2 class="titulo">📦 Gestión de Productos 📦</h2>
+
+  <button routerLink="/productos/nuevo" class="btn btn-add">➕ Nuevo Producto</button>
+
+  <div class="tabla-wrapper">
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of productos; let i = index" [ngClass]="getStockClass(p.stock)">
+          <td>{{ i + 1 }}</td>
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.descripcion }}</td>
+          <td>{{ p.categoria }}</td>
+          <td>{{ p.precio | currency:' S/' }}</td>
+          <td>{{ p.stock }}</td>
+        <td>
+          <button class="btn btn-edit" [routerLink]="['/productos/editar', p.id]">✏️ Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="volver-panel">
+    <button routerLink="/panel" class="btn btn-add"> 🔙 Volver al Panel</button>
+  </div>
+</div>
+
+
+
+<div class="paw-background">
+  <div class="paw" style="left: 10%; animation-delay: 0s;">🐾</div>
+  <div class="paw" style="left: 30%; animation-delay: 2s;">🐾</div>
+  <div class="paw" style="left: 50%; animation-delay: 4s;">🐾</div>
+  <div class="paw" style="left: 70%; animation-delay: 6s;">🐾</div>
+  <div class="paw" style="left: 90%; animation-delay: 8s;">🐾</div>
+</div>

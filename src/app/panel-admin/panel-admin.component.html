@@ -1,0 +1,47 @@
+    <div class="paw-background">
+      <div *ngFor="let i of pawPrints" class="paw" [style.left]="i.left" [style.animationDelay]="i.delay">🐾</div>
+    </div>
+
+    <div class="admin-panel-container">
+      <div class="admin-panel">
+        <header class="text-center mb-12">
+          <h2 class="text-5xl font-extrabold mb-2 uppercase tracking-wide text-red-700">
+            ¡Bienvenido, Admin! <span class="text-6xl align-middle">🐾</span>
+          </h2>
+          <p class="text-xl text-gray-600 font-medium">Administra tu clínica y ayuda a nuestros amigos peludos.</p>
+        </header>
+
+        <div class="options-grid">
+          <button [routerLink]="['/mascotas']" class="option-button group">
+            <span class="icon-lg">🐶</span>
+            <span class="text-xl font-bold">Ver Mascotas</span>
+            <span class="text-sm opacity-80 mt-1">Gestión de fichas e historial.</span>
+          </button>
+
+          <button [routerLink]="['/clientes']" class="option-button group">
+            <span class="icon-lg">👥</span>
+            <span class="text-xl font-bold">Ver Clientes</span>
+            <span class="text-sm opacity-80 mt-1">Información de contacto y propietarios.</span>
+          </button>
+
+          <button [routerLink]="['/servicios']" class="option-button group">
+            <span class="icon-lg">💉</span>
+            <span class="text-xl font-bold">Servicios</span>
+            <span class="text-sm opacity-80 mt-1">Inventario de tratamientos y precios.</span>
+          </button>
+
+          <button [routerLink]="['/productos']" class="option-button group">
+            <span class="icon-lg">📦</span>
+            <span class="text-xl font-bold">Productos</span>
+            <span class="text-sm opacity-80 mt-1">Inventario de productos y precios.</span>
+          </button>
+        </div>
+
+        <br>
+          <br>
+        <button (click)="logout()" class="logout-btn mt-10">
+          <span class="text-2xl">🚪</span>
+          Cerrar Sesión
+        </button>
+      </div>
+    </div>

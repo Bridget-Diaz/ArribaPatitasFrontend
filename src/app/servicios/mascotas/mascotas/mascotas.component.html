@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<div class="mascotas-container">
+  <h2 class="titulo">🐾 Lista de Mascotas 🐾</h2>
+
+  <div class="tabla-wrapper">
+    <table class="tabla-mascotas">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Nombre Mascota</th>
+          <th>Especie</th>
+          <th>Raza</th>
+          <th>Edad</th>
+          <th>Peso</th>
+          <th>Observaciones</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let mascota of mascotas">
+          <td>{{ mascota.propietario }}</td>
+          <td>{{ mascota.nombre }}</td>
+          <td>{{ mascota.especie }}</td>
+          <td>{{ mascota.raza }}</td>
+          <td>{{ mascota.edad }}</td>
+          <td>{{ mascota.peso }}</td>
+          <td>{{ mascota.observaciones }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div class="volver-panel">
+  <button routerLink="/panel" class="btn-add">🔙 Volver al Panel</button>
+</div>
+
+</div>
+
+
+
+
+<div class="paw-background">
+  <div class="paw" style="left: 10%; animation-delay: 0s;">🐾</div>
+  <div class="paw" style="left: 30%; animation-delay: 2s;">🐾</div>
+  <div class="paw" style="left: 50%; animation-delay: 4s;">🐾</div>
+  <div class="paw" style="left: 70%; animation-delay: 6s;">🐾</div>
+  <div class="paw" style="left: 90%; animation-delay: 8s;">🐾</div>
+
+</div>

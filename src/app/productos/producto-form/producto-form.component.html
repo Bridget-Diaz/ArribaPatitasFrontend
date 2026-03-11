@@ -1,0 +1,39 @@
+<div class="producto-form-container">
+  <h2>{{ editando ? '✏️ Editar Producto' : '➕ Nuevo Producto' }}</h2>
+
+  <form (ngSubmit)="guardar()" #productoForm="ngForm">
+    <label>Nombre:</label>
+    <input type="text" [(ngModel)]="producto.nombre" name="nombre" required />
+
+    <label>Descripción:</label>
+    <textarea [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+    
+    <label>Categoría:</label>
+      <select [(ngModel)]="producto.categoria" name="categoria" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Alimento">Alimento</option>
+          <option value="Medicamento">Medicamento</option>
+          <option value="Accesorio">Accesorio</option>
+          <option value="Juguete">Juguete</option>
+          <option value="Higiene">Higiene</option>
+      </select>
+
+
+    <label>Precio:</label>
+    <input type="number" [(ngModel)]="producto.precio" name="precio" required />
+
+    <label>Stock:</label>
+    <input type="number" [(ngModel)]="producto.stock" name="stock" required />
+
+    <label>Imagen:</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+
+   <button type="submit" class="btn btn-save" [disabled]="!productoForm.form.valid">
+             {{ editando ? '💾 Actualizar' : '✅ Guardar' }}
+    </button>
+
+   <button type="button" class="btn btn-cancel" (click)="router.navigate(['/productos'])">
+                🔙 Cancelar
+    </button>
+  </form>
+</div>

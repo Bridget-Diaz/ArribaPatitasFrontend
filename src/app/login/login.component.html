@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- 0. FONDO DEGRADADO -->
+<div class="background-gradient"></div>
+
+<!-- 1. HUELLAS FLOTANTES (EN TODO EL FONDO) -->
+<div class="paw-container">
+  <div class="paw" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="paw" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="paw" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="paw" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="paw" style="left: 90%; animation-delay: 8s;"></div>
+</div>
+
+<!-- 3. CONTENEDOR DEL FORMULARIO -->
+<div class="login-container">
+  <div class="paw-icon-top">
+    <i class="fa-solid fa-paw"></i>
+  </div>
+
+  <h2>INICIAR SESIÓN</h2>
+
+  <form (ngSubmit)="login()">
+    <label class="form-field-label">USERNAME</label>
+    <input type="text" [(ngModel)]="username" name="username" placeholder="username" required />
+
+    <label class="form-field-label">CONTRASEÑA</label>
+    <input type="password" [(ngModel)]="password" name="password" placeholder="••••••••" required />
+
+    <button type="submit">INGRESAR</button>
+  </form>
+</div>

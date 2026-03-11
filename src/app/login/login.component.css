@@ -1,0 +1,252 @@
+:host {
+    --bg-dark-end: #FF5722; 
+    --bg-light-start: #FF9800; 
+    --bg-yellow-corner: #FFC107; 
+    --accent: #FF5722; 
+    --text-dark: #333333;
+    --form-bg: #F97D33; 
+    --white: #ffffff;
+    --dark-button: #444444;
+    --page-bg: #F5F5F5;
+    --text-light: var(--white);
+    --paw-color: rgba(255, 255, 255, 0.1);
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif; 
+    background-color: var(--page-bg);
+    overflow: hidden;
+    position: relative;
+}
+
+
+.background-gradient {
+    position: fixed;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(135deg, var(--bg-yellow-corner) 0%, var(--bg-light-start) 20%, var(--bg-dark-end) 100%);
+    z-index: 1;
+    display: block;
+}
+
+
+.brand-fixed {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 15px;
+    z-index: 20;
+    background-color: var(--white); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.brand-fixed .logo-icon {
+    color: var(--bg-light-start); 
+    font-size: 20px;
+}
+
+.brand-fixed span {
+    font-weight: 600;
+    color: var(--text-dark); 
+    font-size: 18px; 
+    letter-spacing: 0.5px;
+}
+
+
+.login-container {
+    max-width: 350px; 
+    width: 90%; 
+    padding: 40px 30px 30px; 
+    background-color: var(--form-bg); 
+    border-radius: 15px; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    position: relative; 
+    z-index: 10; 
+    animation: slideIn 0.6s ease-out; 
+    border: none;
+}
+
+.paw-icon-top {
+    display: flex;
+    position: absolute;
+    top: -15px; 
+    right: -15px; 
+    width: 50px; 
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-light-start); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg); 
+    z-index: 12;
+}
+.paw-icon-top i {
+    color: var(--text-dark); 
+    font-size: 22px;
+}
+
+
+.login-container h2 {
+    margin-top: 5px; 
+    margin-bottom: 25px;
+    color: var(--text-light); 
+    font-size: 20px; 
+    font-weight: 700; 
+    letter-spacing: 0.5px;
+    text-transform: uppercase; 
+}
+
+.form-field-label {
+    display: block;
+    text-align: left;
+    font-size: 13px; 
+    font-weight: 600; 
+    color: var(--text-light); 
+    margin-bottom: 5px;
+    margin-top: 15px; 
+    text-transform: uppercase;
+    position: static; 
+}
+
+.login-container input {
+    width: 90%;
+    padding: 12px 15px; 
+    border: none; 
+    background: var(--white);
+    border-radius: 8px; 
+    font-size: 15px; 
+    font-weight: 500;
+    color: var(--text-dark); 
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.login-container input:focus {
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 0 2px var(--accent); 
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px; 
+    background-color: var(--dark-button); 
+    color: var(--white);
+    border: none; 
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: 700; 
+    cursor: pointer;
+    margin-top: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.login-container button:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.paw-container { 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5; 
+    display: block; 
+}
+
+.paw {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--paw-color);
+    animation: animatePaws 15s linear infinite;
+}
+
+.paw::before {
+    content: "\f1b0"; /* Icono de huella */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    font-size: 30px;
+    color: inherit;
+}
+
+.paw:nth-child(2) {
+    width: 65px;
+    height: 65px;
+    animation-duration: 20s;
+    animation-delay: 2s;
+    opacity: 0.8;
+}
+
+.paw:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    animation-duration: 18s;
+    animation-delay: 4s;
+    opacity: 0.7;
+}
+
+.paw:nth-child(4) {
+    width: 55px;
+    height: 55px;
+    animation-duration: 25s;
+    animation-delay: 6s;
+    opacity: 0.9;
+}
+
+.paw:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    animation-duration: 16s;
+    animation-delay: 8s;
+    opacity: 0.85;
+}
+
+@keyframes animatePaws {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
