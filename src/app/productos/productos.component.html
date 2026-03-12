@@ -10,20 +10,36 @@
           <th>ID</th>
           <th>Nombre</th>
           <th>Descripción</th>
+<<<<<<< HEAD
+          <th>Categoría</th>
+=======
+>>>>>>> origin/develop
           <th>Precio</th>
           <th>Stock</th>
           <th>Acciones</th>
         </tr>
       </thead>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/develop
       <tbody>
         <tr *ngFor="let p of productos; let i = index" [ngClass]="getStockClass(p.stock)">
           <td>{{ i + 1 }}</td>
           <td>{{ p.nombre }}</td>
           <td>{{ p.descripcion }}</td>
+<<<<<<< HEAD
+          <td>{{ p.categoria }}</td>
+          <td>{{ p.precio | currency:' S/' }}</td>
+          <td>{{ p.stock }}</td>
+        <td>
+          <button class="btn btn-edit" [routerLink]="['/productos/editar', p.id]">✏️ Editar</button>
+=======
           <td>{{ p.precio | currency:' S/' }}</td>
           <td>{{ p.stock }}</td>
           <td>
             <button class="btn btn-edit" [routerLink]="['/productos/editar', p.id]">✏️ Editar</button>
+>>>>>>> origin/develop
           </td>
         </tr>
       </tbody>
