@@ -2,6 +2,11 @@
   max-width: 600px;
   margin: 40px auto;
   background: #ffffff;
+<<<<<<< HEAD
+   max-height: 90vh; /* ocupa casi toda la pantalla */
+  overflow-y: auto; /* activa scroll vertical */
+=======
+>>>>>>> origin/develop
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -18,6 +23,24 @@
   font-weight: bold;
 }
 
+<<<<<<< HEAD
+.producto-form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.producto-form-container::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 10px;
+}
+
+.producto-form-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+
+
+=======
+>>>>>>> origin/develop
 /* Formulario */
 form {
   display: flex;

@@ -14,6 +14,12 @@ import { ProductoService, Producto } from '../../servicios/productos/producto.se
 export class ProductoFormComponent implements OnInit {
 producto: Producto = { nombre: '', descripcion: '', precio: 0, stock: 0 };
 
+<<<<<<< HEAD
+
+  selectedFile: File | null = null;// SE AGREGO ETA VAINA PARA LA IMAGEN SI TODO DA ERROR ELIMINARLA AHORITA XD SOLO COMENTO POR SI DA UN ERROR GRAVISIMO PERO SI FUNCIONA ASI :D (NO TOCAR)
+
+=======
+>>>>>>> origin/develop
   editando = false;
 
   constructor(
@@ -22,10 +28,22 @@ producto: Producto = { nombre: '', descripcion: '', precio: 0, stock: 0 };
     public router: Router
   ) {}
 
+<<<<<<< HEAD
+  onFileSelected(event: any) {//ESTE METODO ES PARA SELECCIONAR LA IMAGEN SI TODO DA ERROR ELIMINARLO AHORITA XD SOLO COMENTO POR SI DA UN ERROR GRAVISIMO PERO SI FUNCIONA ASI :D (NO TOCAR)
+    this.selectedFile = event.target.files[0];
+  }
+
+
+=======
+>>>>>>> origin/develop
   //de tanto true false es una webada
   //parametro void que define una constante o variable id que se extrae de un get por id entonces si 
   //ese id cumple con las condiciones(e verdadero) se obtendra el producto por id 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/develop
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -38,7 +56,11 @@ producto: Producto = { nombre: '', descripcion: '', precio: 0, stock: 0 };
   //subscribe es para suscribirse a mi canal mis redes sosciales
   //estara navegando hasta hallar productos
   //de lo contrario se guarda un nuevo producto pero usa el mismo html pa mas placer
+<<<<<<< HEAD
+  /*guardar(): void {
+=======
   guardar(): void {
+>>>>>>> origin/develop
     if (this.editando) {
       this.productoService.actualizarProducto(this.producto.id!, this.producto).subscribe(() => {
         this.router.navigate(['/productos']);
@@ -48,5 +70,46 @@ producto: Producto = { nombre: '', descripcion: '', precio: 0, stock: 0 };
         this.router.navigate(['/productos']);
       });
     }
+<<<<<<< HEAD
+  }*/
+
+  guardar(): void {
+
+  if (!this.selectedFile && !this.editando) {
+    alert("Selecciona una imagen antes de guardar");
+    return;
+  }
+
+  if (this.editando) {
+
+    // Si está editando y NO selecciona imagen, solo actualiza normal
+    if (!this.selectedFile) {
+      this.productoService.actualizarProducto(this.producto.id!, this.producto).subscribe(() => {
+        this.router.navigate(['/productos']);
+      });
+      return;
+    }
+
+    // Si está editando y SÍ selecciona imagen
+    this.productoService.actualizarProductoConImagen(this.producto.id!, this.producto, this.selectedFile)
+      .subscribe(() => {
+        this.router.navigate(['/productos']);
+      });
+
+  } else {
+
+    // Nuevo producto con imagen
+    this.productoService.guardarProductoConImagen(this.producto, this.selectedFile!)
+      .subscribe(() => {
+        this.router.navigate(['/productos']);
+      });
   }
 }
+
+
+    
+}
+=======
+  }
+}
+>>>>>>> origin/develop

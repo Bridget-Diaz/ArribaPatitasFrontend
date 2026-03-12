@@ -7,6 +7,20 @@
 
     <label>Descripción:</label>
     <textarea [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+<<<<<<< HEAD
+    
+    <label>Categoría:</label>
+      <select [(ngModel)]="producto.categoria" name="categoria" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Alimento">Alimento</option>
+          <option value="Medicamento">Medicamento</option>
+          <option value="Accesorio">Accesorio</option>
+          <option value="Juguete">Juguete</option>
+          <option value="Higiene">Higiene</option>
+      </select>
+
+=======
+>>>>>>> origin/develop
 
     <label>Precio:</label>
     <input type="number" [(ngModel)]="producto.precio" name="precio" required />
@@ -14,6 +28,12 @@
     <label>Stock:</label>
     <input type="number" [(ngModel)]="producto.stock" name="stock" required />
 
+<<<<<<< HEAD
+    <label>Imagen:</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+
+=======
+>>>>>>> origin/develop
    <button type="submit" class="btn btn-save" [disabled]="!productoForm.form.valid">
              {{ editando ? '💾 Actualizar' : '✅ Guardar' }}
     </button>

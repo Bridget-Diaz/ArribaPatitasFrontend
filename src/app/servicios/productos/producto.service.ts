@@ -7,8 +7,15 @@ export interface Producto {
   id?: number;    //osea me daba mareo lo dejo asi y funciona :D (NO TOCAR)
   nombre: string;
   descripcion: string;
+<<<<<<< HEAD
+  categoria?: string; // Agrega el campo de categoría como opcional
   precio: number;
   stock: number;
+  imagen?:  string; // Agrega el campo de imagen como opcional ACA ESTA EL CAMBIO IA MIRAME XD SOLO COMENTO POR SI DA UN ERROR GRAVISIMO PERO SI FUNCIONA ASI :D (NO TOCAR)
+=======
+  precio: number;
+  stock: number;
+>>>>>>> origin/develop
 }
 
 @Injectable({
@@ -41,7 +48,42 @@ guardarProducto(producto: Producto): Observable<Producto> {
   eliminarProducto(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+<<<<<<< HEAD
+
+  //se agregaron estos metodos de aca pa abajo
+guardarProductoConImagen(producto: Producto, file: File): Observable<Producto> {
+  const formData = new FormData();
+
+  formData.append("nombre", producto.nombre);
+  formData.append("descripcion", producto.descripcion);
+  formData.append("categoria", producto.categoria || "sinnada xd"); // 👈 si no usas categoria aún, pon fijo o crea campo
+  formData.append("precio", producto.precio.toString());
+  formData.append("stock", producto.stock.toString());
+  formData.append("imagen", file);
+
+  return this.http.post<Producto>(`${this.apiUrl}/guardar-con-imagen`, formData);
+}
+
+actualizarProductoConImagen(id: number, producto: Producto, file: File): Observable<Producto> {
+  const formData = new FormData();
+
+  formData.append("nombre", producto.nombre);
+  formData.append("descripcion", producto.descripcion);
+  formData.append("categoria", producto.categoria || "sinnada xd"); // 👈 si no usas categoria aún, pon fijo o crea campo
+  formData.append("precio", producto.precio.toString());
+  formData.append("stock", producto.stock.toString());
+  formData.append("imagen", file);
+
+  return this.http.put<Producto>(`${this.apiUrl}/actualizar-con-imagen/${id}`, formData);
+}
+
+
+
+}
+
+=======
 }
 
 
 // http://localhost:8080/api/productos
+>>>>>>> origin/develop
